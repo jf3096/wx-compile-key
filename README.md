@@ -3,7 +3,7 @@
 [![NPM](https://nodei.co/npm/wx-compile-key.png)](https://www.npmjs.com/package/wx-compile-key)
 
 这是一个微信小程序的辅助工具， 作用很简单， 只是一个简单的hack， 改了一下他的源码， 把微信小程序编译的快捷键变成了全局。
-快捷键默认设置为**control+alt+shift+f10**。
+快捷键默认设置为**control+alt+shift+f10**。（**不满足？那给你弄一个gulp和webpack让你自动保存自动编译吧**）
 
 ## 目的
 
@@ -20,7 +20,8 @@
 
 ```shell
 npm i wx-compile-key -g
-wx-compile-key  ##**这句话必须要在管理员模式下执行， 因为微信小程序的文件都是限定了修改权限的**
+
+wx-compile-key  ##这句话必须要在管理员模式下执行， 因为微信小程序的文件都是限定了修改权限的
 ```
 
 ## 测试用例
@@ -51,7 +52,7 @@ wx-compile-key  ##**这句话必须要在管理员模式下执行， 因为微�
 ![alt tag](~resources/not-exist-path.png)
 
 ## 成功样例
-在开发阶段， 顺便按一下ctrl+shift+alt+f10就可以顺便编译微信小程序啦（**不满足？那给你弄一个gulp和webpack让你自动保存自动编译吧**）
+在开发阶段， 顺便按一下ctrl+shift+alt+f10就可以顺便编译微信小程序啦。
 
 ![alt tag](~resources/output.gif)
 
