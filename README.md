@@ -20,8 +20,34 @@
 
 ```shell
 npm i wx-compile-key -g
-wx-compile-key  ##这句话必须要在管理员模式下执行， 因为微信小程序的文件都是限定了修改权限的
+wx-compile-key  ##**这句话必须要在管理员模式下执行， 因为微信小程序的文件都是限定了修改权限的**
 ```
+
+## 测试用例
+由于时间关系， 只是做了e2e测试， 后续有时间会补上单元测试。 问题应该不大， 如果遇到任何问题，
+请open issue，我尽可能在当天给您解答，一下是所有的e2e测试用例截图：
+
+### 成功用例
+当看到添加全局热键成功后可以使用ctrl+alt+shift+f10编译小程序。
+例如你在自己Vscode开发的时候， 写完代码， 顺便按这个快捷键编译一下。
+![alt tag](~resources/success.png)
+
+### 已添加
+说明wx-compile-key的命令已经使用过。
+![alt tag](~resources/appended.png)
+
+### 非法路径
+输入不合法路劲时，弹出一下提示， 重新输入一个合法路劲即可。
+![alt tag](~resources/invalid-path-01.png)
+![alt tag](~resources/invalid-path-02.png)
+
+### 路径不存在
+路径输入正确，但并非微信小程序的根目录，重新定位目录即可。
+![alt tag](~resources/not-exist-path.png)
+
+## 成功样例
+在开发阶段， 顺便按一下ctrl+shift+alt+f10就可以顺便编译微信小程序啦（**不满足？那给你弄一个gulp和webpack让你自动保存自动编译吧**）
+![alt tag](~resources/output.gif)
 
 ## Licensing
 MIT license

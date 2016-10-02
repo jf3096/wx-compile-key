@@ -1,8 +1,9 @@
+#!/usr/bin/env node
 import {cmdPrompt} from "./cmdPrompt";
 import wxChmod from "./wxChmod";
 import {exposeCompileShortcut} from "./exposeShortcut";
 
-async function execute() {
+export async function execute() {
     const path = await cmdPrompt();
     try {
         await wxChmod(path);
@@ -14,9 +15,3 @@ async function execute() {
         console.log(err);
     }
 }
-
-execute();
-
-
-
-

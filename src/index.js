@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -25,5 +26,5 @@ function execute() {
         }
     });
 }
-execute();
+exports.execute = execute;
 //# sourceMappingURL=index.js.map
