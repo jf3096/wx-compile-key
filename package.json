@@ -1,0 +1,24 @@
+{
+  "name": "wx-compile-key",
+  "version": "0.0.1",
+  "description": "微信小程序全局编译快捷键",
+  "bin": "src/index",
+  "keywords": [
+    "wx",
+    "weixin",
+    "微信",
+    "小程序",
+    "微信小程序",
+    "wechat"
+  ],
+  "author": "Ailun She",
+  "license": "ISC",
+  "devDependencies": {
+    "chmod": "^0.2.1",
+    "inquirer": "^1.2.1"
+  },
+  "wxtools": {
+    "path": "C:/Program Files (x86)/Tencent/微信web开发者工具",
+    "relativeShortcutPath": "package.nw/app/dist/common/shortCut/shortCut.js"
+  }
+}
