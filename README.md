@@ -5,7 +5,7 @@
 这是一个微信小程序的辅助工具， 作用很简单， 只是一个简单的hack， 改了一下他的源码， 把微信小程序编译的快捷键变成了全局。
 快捷键默认设置为**control+alt+shift+f10**。
 
-##目的
+## 目的
 
 其实这一个只是gulp-wx-compile的插件之一， 目的很简单， 让微信小程序变得跟webpack或者gulp一样， 当我们保存自己的代码， 小程序就自动编译，
 感觉跟browser sync一样， 提高我们开发效率。
@@ -30,23 +30,29 @@ wx-compile-key  ##**这句话必须要在管理员模式下执行， 因为微�
 ### 成功用例
 当看到添加全局热键成功后可以使用ctrl+alt+shift+f10编译小程序。
 例如你在自己Vscode开发的时候， 写完代码， 顺便按这个快捷键编译一下。
+
 ![alt tag](~resources/success.png)
 
 ### 已添加
 说明wx-compile-key的命令已经使用过。
+
 ![alt tag](~resources/appended.png)
 
 ### 非法路径
 输入不合法路劲时，弹出一下提示， 重新输入一个合法路劲即可。
+
 ![alt tag](~resources/invalid-path-01.png)
+
 ![alt tag](~resources/invalid-path-02.png)
 
 ### 路径不存在
 路径输入正确，但并非微信小程序的根目录，重新定位目录即可。
+
 ![alt tag](~resources/not-exist-path.png)
 
 ## 成功样例
 在开发阶段， 顺便按一下ctrl+shift+alt+f10就可以顺便编译微信小程序啦（**不满足？那给你弄一个gulp和webpack让你自动保存自动编译吧**）
+
 ![alt tag](~resources/output.gif)
 
 ## Licensing
