@@ -1,8 +1,9 @@
 {
   "name": "wx-compile-key",
-  "version": "0.0.1-beta.5",
+  "version": "1.0.0",
   "description": "微信小程序全局编译快捷键",
   "bin": "./bin/index.js",
+  "main": "./src/index.js",
   "scripts": {
     "compile": "./src/index.js"
   },
