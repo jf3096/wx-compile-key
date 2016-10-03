@@ -28,6 +28,18 @@ npm i wx-compile-key -g
 wx-compile-key  ##这句话必须要在管理员模式下执行， 因为微信小程序的文件都是限定了修改权限的
 ```
 
+## Gulp 使用
+```javascript
+npm i wx-compile-key --save-dev
+
+const autoCompileGulpTask = require('wx-compile-key').autoCompileGulpTask;
+
+gulp.task(`wx:autoCompile`, autoCompileGulpTask);
+```
+
+## Webpack Loader
+(未完成测试，暂不公开)
+
 ## 环境
 测试环境在**微信Web开发者工具0.9.092300**
 
@@ -63,7 +75,7 @@ wx-compile-key  ##这句话必须要在管理员模式下执行， 因为微信�
 ![alt tag](~resources/not-exist-path.png)
 
 ## 成功样例
-在开发阶段， 顺便按一下ctrl+shift+alt+f10就可以顺便编译微信小程序啦。
+在开发阶段， 顺便按一下gulp/webpack监听就可以自动修改代码自动编译微信小程序啦。
 
 ![alt tag](~resources/output.gif)
 

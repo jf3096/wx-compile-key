@@ -1,9 +1,10 @@
 "use strict";
-const chmod = require('chmod');
+var chmod = require('chmod');
+var permissionMode = 777;
 function wxChmod(path) {
-    return new Promise((resolve, reject) => {
+    return new Promise(function (resolve, reject) {
         try {
-            chmod(path, 777);
+            chmod(path, permissionMode);
             resolve(true);
         }
         catch (err) {

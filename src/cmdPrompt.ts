@@ -1,7 +1,8 @@
 import {WX_ROOT_PATH, RELATIVE_SHORTCUT_PATH} from "./constants";
-import {isFileExistsSync} from "./utils";
+import {isFileExistsSync} from "./io-utils";
 import * as path from 'path';
 const inquirer = require('inquirer');
+
 const questions = [
     {
         type: 'input',
@@ -11,7 +12,7 @@ const questions = [
             return WX_ROOT_PATH;
         },
         validate: function (value):boolean|string {
-            const isFileExists = isFileExistsSync(value)
+            const isFileExists = isFileExistsSync(value);
             if (isFileExists) {
                 return true;
             }

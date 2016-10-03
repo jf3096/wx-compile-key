@@ -1,9 +1,9 @@
 "use strict";
-const constants_1 = require("./constants");
-const utils_1 = require("./utils");
-const path = require('path');
-const inquirer = require('inquirer');
-const questions = [
+var constants_1 = require("./constants");
+var io_utils_1 = require("./io-utils");
+var path = require('path');
+var inquirer = require('inquirer');
+var questions = [
     {
         type: 'input',
         name: 'wxPath',
@@ -12,7 +12,7 @@ const questions = [
             return constants_1.WX_ROOT_PATH;
         },
         validate: function (value) {
-            const isFileExists = utils_1.isFileExistsSync(value);
+            var isFileExists = io_utils_1.isFileExistsSync(value);
             if (isFileExists) {
                 return true;
             }
@@ -21,7 +21,7 @@ const questions = [
     },
 ];
 function cmdPrompt() {
-    return inquirer.prompt(questions).then((msg) => {
+    return inquirer.prompt(questions).then(function (msg) {
         return path.resolve(msg.wxPath, constants_1.RELATIVE_SHORTCUT_PATH);
     });
 }

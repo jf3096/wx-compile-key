@@ -1,30 +1,24 @@
 "use strict";
-const fs = require('fs');
-const appendScriptStr = `
-    nw.App.registerGlobalHotKey(new nw.Shortcut({
-        key: "Ctrl+Shift+Alt+F10", active: function () {
-            require("../actions/actions.js").reBuild()
-        }
-    }));
-`;
+var fs = require('fs');
+var appendScriptStr = "\n    nw.App.registerGlobalHotKey(new nw.Shortcut({\n        key: \"Ctrl+Shift+Alt+F10\", active: function () {\n            require(\"../actions/actions.js\").reBuild()\n        }\n    }));\n";
 function isAppendScriptExists(content) {
     return content.indexOf(appendScriptStr) > -1;
 }
 function hasAppendedPromise(shortcutPath) {
-    return new Promise((resolve, reject) => {
-        fs.readFile(shortcutPath, (err, data) => {
+    return new Promise(function (resolve, reject) {
+        fs.readFile(shortcutPath, function (err, data) {
             if (err) {
                 reject(err);
                 return;
             }
-            const content = data.toString();
+            var content = data.toString();
             resolve(isAppendScriptExists(content));
         });
     });
 }
 function appendScript(shortcutPath) {
-    return new Promise((resolve, reject) => {
-        fs.appendFile(shortcutPath, appendScriptStr, (err) => {
+    return new Promise(function (resolve, reject) {
+        fs.appendFile(shortcutPath, appendScriptStr, function (err) {
             !err ? resolve(true) : reject(err);
         });
     });
@@ -32,11 +26,11 @@ function appendScript(shortcutPath) {
 // 修改微信开发工具，让编译代码快捷键暴露到全局
 function exposeCompileShortcut(shortcutPath) {
     return hasAppendedPromise(shortcutPath)
-        .then((hasAppended) => {
+        .then(function (hasAppended) {
         if (!hasAppended) {
             return appendScript(shortcutPath);
         }
-        return Promise.reject(new Error(`script has already appended.`));
+        return Promise.reject(new Error("script has already appended."));
     });
 }
 exports.exposeCompileShortcut = exposeCompileShortcut;
