@@ -1,6 +1,6 @@
 {
   "name": "wx-compile-key",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "微信小程序全局编译快捷键",
   "bin": "./bin/index.js",
   "main": "./src/index.js",
@@ -23,7 +23,7 @@
     "chmod": "^0.2.1",
     "es6-promise": "^4.0.4",
     "inquirer": "^1.2.1",
-    "robotjs": "^0.4.4"
+    "robotjs": "^0.4.2"
   },
   "repository": {
     "type": "git",
