@@ -1,7 +1,7 @@
 "use strict";
-var autoCompileWX_1 = require("../src/autoCompileWX");
+var triggerCompile_1 = require('../src/triggerCompile');
 exports.autoCompileGulpTask = function (cb) {
-    autoCompileWX_1.default();
+    triggerCompile_1.default();
     cb();
 };
 //# sourceMappingURL=autoCompileGulpTask.js.map

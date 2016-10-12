@@ -1,5 +1,5 @@
-import autoCompileWX from "../src/autoCompileWX";
+import triggerCompile from '../src/triggerCompile';
 export const autoCompileGulpTask = (cb) => {
-    autoCompileWX();
+    triggerCompile();
     cb();
 };

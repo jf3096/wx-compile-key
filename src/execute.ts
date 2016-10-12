@@ -1,16 +1,20 @@
-import {cmdPrompt} from "./cmdPrompt";
-import wxChmod from "./wxChmod";
-import {exposeCompileShortcut} from "./exposeShortcut";
+import {cmdPrompt} from './cmdPrompt';
+import wxChmod from './wxChmod';
+import {exposeCompileShortcut} from './exposeShortcut';
+import findPort from './findPort';
+import getExpressTpl from '../tpl/index';
 
 export const execute = async function () {
     const path = await cmdPrompt();
     try {
         await wxChmod(path);
-        const isSuccess = await exposeCompileShortcut(path) as any;
+        const port = await findPort();
+        const appendScriptStr = getExpressTpl(port);
+        const isSuccess = await exposeCompileShortcut(path, appendScriptStr);
         if (isSuccess) {
-            console.log(`添加全局编译热键成功， 热键为ctrl+alt+shift+f10`);
+            console.info(`添加自动编译成功`);
         }
     } catch (err) {
-        console.log(err);
+        console.info(err);
     }
 };

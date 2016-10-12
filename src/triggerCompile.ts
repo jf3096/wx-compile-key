@@ -1,18 +1,17 @@
-const robot = require("robotjs");
-
-type OP = 'up'|'down';
-
-function combineKey(...keys:Array<string>) {
-    combineKeyOp('down', ...keys);
-    combineKeyOp('up', ...keys);
-}
-
-function combineKeyOp(op:OP, ...keys:Array<string>) {
-    keys.forEach((key:string)=> {
-        robot.keyToggle(key, op);
-    })
-}
+import * as request from 'request';
+import {getPort} from './findPort';
 
 export default function triggerCompile() {
-    combineKey('control', 'shift', 'alt', 'f10');
+    const port = getPort();
+    if (port) {
+        try {
+            request.get(`http://localhost:${port}`).on('error', (err: Error)=> {
+                console.error(err);
+            });
+        } catch (err) {
+            throw new Error("请打开微信web开发平台\r\n" + err.toString());
+        }
+    } else {
+        throw new Error(`triggerCompile.ts: please append script before trigger compile`);
+    }
 }

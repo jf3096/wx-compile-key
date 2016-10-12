@@ -1,7 +1,7 @@
-import autoCompileWX from "../src/autoCompileWX";
+import triggerCompile from '../src/triggerCompile';
 
-export const autoCompileWebpackLoader = (content:string)=> {
+export const autoCompileWebpackLoader = (content: string)=> {
     this.cacheable && this.cacheable();
-    autoCompileWX();
+    triggerCompile();
     return content;
 };
