@@ -85,3 +85,9 @@ jspm_packages
 
 # Sourcemap
 *.map
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/typescript-compiler.xml
+.idea/watcherTasks.xml
+.idea/wx-compile-key.iml
