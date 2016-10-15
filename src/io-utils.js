@@ -16,4 +16,3 @@ function updateWxRootPath(value) {
     replaceFromFile(packageConfigPath, constants_1.WX_ROOT_PATH, value);
 }
 exports.updateWxRootPath = updateWxRootPath;
-//# sourceMappingURL=io-utils.js.map

@@ -4,4 +4,3 @@ exports.autoCompileGulpTask = function (cb) {
     triggerCompile_1.default();
     cb();
 };
-//# sourceMappingURL=autoCompileGulpTask.js.map

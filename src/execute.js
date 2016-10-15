@@ -29,4 +29,3 @@ exports.execute = function () {
         }
     });
 };
-//# sourceMappingURL=execute.js.map

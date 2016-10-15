@@ -6,4 +6,3 @@ exports.autoCompileWebpackLoader = function (content) {
     triggerCompile_1.default();
     return content;
 };
-//# sourceMappingURL=wxCompileLoader.js.map

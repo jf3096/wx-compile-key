@@ -32,4 +32,3 @@ function exposeCompileShortcut(shortcutPath, appendScriptStr) {
     });
 }
 exports.exposeCompileShortcut = exposeCompileShortcut;
-//# sourceMappingURL=exposeShortcut.js.map

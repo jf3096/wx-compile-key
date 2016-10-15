@@ -19,4 +19,3 @@ function triggerCompile() {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = triggerCompile;
-//# sourceMappingURL=triggerCompile.js.map

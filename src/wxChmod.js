@@ -14,4 +14,3 @@ function wxChmod(path) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = wxChmod;
-//# sourceMappingURL=wxChmod.js.map
